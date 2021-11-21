@@ -9,7 +9,6 @@ import Container from '@mui/material/Container';
 import {UserContext} from "./UserContext"
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-const {}
 
 export function Login() {
     const { setUser } = useContext(UserContext);

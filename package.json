@@ -4,10 +4,11 @@
   "description": "Hanbyul Park   Donika Morina   Jananaen Selvapaskaran   Kiet Do   Muhammad Umair Ahsan   Pui Hei Yan",
   "main": "index.js",
   "scripts": {
-    "frontend": "cd frontend && npm start",
-    "backend": "cd backend && nodemon server.js",
-    "start": "cd backend && nodemon server.js",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "start": "cd ./backend/ && npm install && node server.js",
+    "heroku-postbuild": "cd ./frontend/ && npm install && npm run build",
+    "backend": "cd ./backend/ && nodemon server.js ",
+    "frontend": "cd ./frontend/ && npm run start",
+    "test":"cd ./frontend/ && npm run test"
   },
   "repository": {
     "type": "git",
