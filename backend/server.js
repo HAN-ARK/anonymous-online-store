@@ -31,6 +31,12 @@ app.use('/items', itemsRouter)
 //app.use('/vendors', vendorsRouter)
 app.use('/users', userRouter)
 
+app.use(express.static(path.join(__dirname, '../build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../build'))
+})
+
+
 // server listen
 app.listen(PORT, () => {
     console.log(`Server successfully running on ${PORT}`)
