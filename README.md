@@ -105,7 +105,9 @@ DELETE: 'items:id        ' TESTED 'delete one item   ' req: target item id
 ```
 </details>  
 
-# Project Version Management  
+# Project Version Management 
+Not all of backend implementations are linked in front end. Finishing full implementation is going to be the future plan.  
+
 ## Production  
 [Production Version](https://github.com/HAN-ARK/anonymous-online-store)  
   
