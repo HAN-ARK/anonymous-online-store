@@ -1,39 +1,22 @@
 {
   "name": "anonymous-online-store",
-  "version": "0.1.0",
-  "private": true,
-  "engines": {
-    "npm": "6.14.15",
-    "node": "14.18.0"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.5.0",
-    "@emotion/styled": "^11.3.0",
-    "@mui/material": "^5.1.0",
-    "axios": "^0.24.0",
-    "dotenv": "^10.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^16.14.0",
-    "react-redux": "^6.0.0",
-    "react-router-dom": "^4.3.1",
-    "react-script": "^2.0.5",
-    "react-scripts": "2.1.1",
-    "redux": "^4.0.1"
-  },
+  "version": "1.0.0",
+  "description": "Hanbyul Park   Donika Morina   Jananaen Selvapaskaran   Kiet Do   Muhammad Umair Ahsan   Pui Hei Yan",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "server":"nodemon backend/server.js",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HAN-ARK/anonymous-online-store.git"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HAN-ARK/anonymous-online-store/issues"
+  },
+  "homepage": "https://github.com/HAN-ARK/anonymous-online-store#readme"
 }

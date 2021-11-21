@@ -2,10 +2,12 @@ const express = require('express') // backend framework for nodejs
 // body parser is included in express 
 const cors = require('cors') // cross origin resource sharing
 const mongoose = require('mongoose') // ODM library for MongoDB & Nodejs
+const path = require('path')
 
 require('dotenv').config() // dotenv 
 
 // back end framework express object 
+// local 3001
 const app = express() 
 const {PORT = 3001} = process.env; // also can set env variables in .env.dev
 
@@ -31,9 +33,14 @@ app.use('/items', itemsRouter)
 //app.use('/vendors', vendorsRouter)
 app.use('/users', userRouter)
 
-app.use(express.static(path.join(__dirname, '../build')))
+// heroku related setting
+
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, '../frontend/build')))
+
+// AFTER defining routes: Anything that doesn't match what's above, send back index.html; (the beginning slash ('/') in the string is important!)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../build'))
+  res.sendFile(path.join(__dirname + '/../frontend/build/index.html'))
 })
 
 
