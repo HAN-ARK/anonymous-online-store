@@ -6,6 +6,7 @@
   "scripts": {
     "frontend": "cd frontend && npm start",
     "backend": "cd backend && nodemon server.js",
+    "start": "cd backend && nodemon server.js",
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "repository": {
