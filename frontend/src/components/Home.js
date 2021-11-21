@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import axios from 'axios';
 import { connect } from 'react-redux'
 import { addToCart } from './actions/cartActions'
-import { initState as state } from '../components/reducers/cartReducer';
+import { initState as state } from './reducers/cartReducer';
 import { UserContext } from "../UserContext"
 
 function Home(props) {
@@ -10,7 +10,7 @@ function Home(props) {
     const handleClick = async (props, item, user) => {
         props.addToCart(item.id);
         if (user === null) return;
-        const resp = await axios.get('https://anonymous-store.herokuapp.com/items');
+        const resp = await axios.get('http://localhost:3001/items');
         var arr = resp.data;
         var items = null;
         for (let i = 0; i < arr.length; i++) {
@@ -21,8 +21,8 @@ function Home(props) {
                 break;
             }
         }
-        await axios.post('https://anonymous-store.herokuapp.com/users/addItem', items);
-        let userUpdated = await axios.get(`https://anonymous-store.herokuapp.com/users/get/${user._id}`);
+        await axios.post('http://localhost:3001/users/addItem', items);
+        let userUpdated = await axios.get(`http://localhost:3001/users/get/${user._id}`);
         setUser(userUpdated.data);
     }
 
