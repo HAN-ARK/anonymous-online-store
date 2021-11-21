@@ -1,7 +1,7 @@
 {
   "name": "anonymous-online-store",
   "version": "0.1.0",
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:80",
   "private": true,
   "engines": {
     "npm": "6.14.15",

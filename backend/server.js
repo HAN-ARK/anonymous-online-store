@@ -9,7 +9,7 @@ require('dotenv').config() // dotenv
 // back end framework express object 
 // local 3001
 const app = express() 
-const {PORT = 3001} = process.env; // also can set env variables in .env.dev
+const PORT = process.env.PORT || 80; // also can set env variables in .env.dev
 
 // middlewares, to be used when reaching endpoints 
 app.use(express.json()) // body parser is included in recent express 
