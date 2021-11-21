@@ -65,11 +65,11 @@ USER ACCOUNT
 
 
 
-GET: 'users/ ' TESTED 'get all the users ' req:
-GET: 'users/get/:id ' TESTED 'get one user ' req: user id
-POST: 'users/add ' TESTED 'add a new user ' req:key -> user email:email, username:username, password:password
-POST: 'users/login ' TESTED 'login existing user' req:key -> user email:email, user password:password
-DELETE: 'users/delete/:id' TESTED 'delete a user ' req:key -> user id
+GET:    'users/          '   TESTED  'get all the users  ' req:
+GET:    'users/get/:id   '   TESTED  'get one user       ' req: user id
+POST:   'users/add       '   TESTED  'add a new user     ' req:key -> user email:email, username:username, password:password
+POST:   'users/login     '   TESTED  'login existing user' req:key -> user email:email, user password:password
+DELETE: 'users/delete/:id'   TESTED  'delete a user      ' req:key -> user id
 
 
 
@@ -78,16 +78,16 @@ USER & CART
 
 
 
-POST: 'users/addItem ' TESTED 'add an item ' req:key -> user's id:userId, product id:productId
-POST: 'users/removeItem' TESTED 'delete item ' req:key -> user's id:userId, product id:productId
-POST: 'users/removeAll ' TESTED 'delete all items ' req:key -> user's id:userId, product id:productId
+POST:  'users/addItem    '   TESTED  'add an item       ' req:key -> user's id:userId, product id:productId
+POST:  'users/removeItem '   TESTED  'delete item       ' req:key -> user's id:userId, product id:productId
+POST:  'users/removeAll  '   TESTED  'delete all items  ' req:key -> user's id:userId, product id:productId
 
 
 
 USER REVIEW PAGE
-POST: 'users/total ' TESTED 'total cost in cart ' req: user id:userId
-return:key -> total cost:total, tax value:plusTax
-POST: 'users/checkout ' TESTED 'reset cart & cost ' req: user id:userId
+POST:  'users/total      '   TESTED  'total cost in cart' req: user id:userId
+                                                return:key -> total cost:total, tax value:plusTax
+POST:  'users/checkout   '   TESTED  'reset cart & cost ' req: user id:userId
 
 
 
@@ -96,12 +96,12 @@ Item Side (inside of items.js)
 
 
 
-GET: 'items/ ' TESTED 'get all the items ' req:
-GET: 'items/get/:id ' TESTED 'get one item ' req: item id
-POST: 'items/add ' TESTED 'add a item ' req:key -> image file:img, vendorId:id, itemname:name,
-description:desc, price in number:price
-GET: 'items/image/:id ' TESTED 'get one image ' req: image id
-DELETE: 'items:id ' TESTED 'delete one item ' req: target item id  
+GET:    'items/          ' TESTED 'get all the items ' req:
+GET:    'items/get/:id   ' TESTED 'get one item      ' req: item id
+POST:   'items/add       ' TESTED 'add a item        ' req:key -> image file:img, vendorId:id, itemname:name,
+                                                       description:desc, price in number:price
+GET:    'items/image/:id ' TESTED 'get one image     ' req: image id
+DELETE: 'items:id        ' TESTED 'delete one item   ' req: target item id  
 ```
 </details>  
 
