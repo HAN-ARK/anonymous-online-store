@@ -3,7 +3,7 @@
 # Manulife Team 116 members  
 Hanbyul Park  
 Donika Morina  
-Jananaen Selvapaskaran
+Jananaen Selvapaskaran  
 Kiet Do  
 Muhammad Umair Ahsan  
 Pui Hei Yan  

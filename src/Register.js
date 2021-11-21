@@ -20,7 +20,7 @@ export class Register extends Component {
   }
 
   async checkExisted (email, username) {
-    const res = await axios.get('http://localhost:3001/users');
+    const res = await axios.get('https://anonymous-store.herokuapp.com/users');
     const { data } = res;
     var arr = Object.values(data);
     for (var i = 0; i < arr.length; i++) {
@@ -42,7 +42,7 @@ export class Register extends Component {
     const existed = await this.checkExisted(this.state.email, this.state.username);
     console.log(existed);
     if (existed === false) {
-      const response = await axios.post('http://localhost:3001/users/add', this.state);
+      const response = await axios.post('https://anonymous-store.herokuapp.com/users/add', this.state);
       console.log(response);
       this.setState({userCreated: true});
       window.location.href = "/login";

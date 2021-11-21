@@ -18,7 +18,7 @@ export function Login() {
     const [loggedIn, setLoggedIn] = useState(false);
 
     const checkUser = async (username, password) => {
-        const res = await axios.get('http://localhost:3001/users');
+        const res = await axios.get('https://anonymous-store.herokuapp.com/users');
         const { data } = res;
         var arr = Object.values(data);
         for (var i = 0; i < arr.length; i++) {
@@ -39,7 +39,7 @@ export function Login() {
         }
         setWrongPassword(false);
         const user = {email, username, password};
-        const response = await axios.post('http://localhost:3001/users/login', user);
+        const response = await axios.post('https://anonymous-store.herokuapp.com/users/login', user);
         const storeUser = response.data;
         setUser(storeUser);
         window.localStorage.setItem('id', storeUser);
