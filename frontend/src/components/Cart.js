@@ -7,7 +7,6 @@ import Recipe from './Recipe';
 import {UserContext} from "../UserContext";
 import image from "../images/noproduct.png"
 
-
 function Cart(props) {
     const { user, setUser } = useContext(UserContext);
 
@@ -20,8 +19,8 @@ function Cart(props) {
         const userId = user._id;
         const productId = item._id;
         var items = {userId, productId};
-        await axios.post('http://localhost:80/addItem', items);
-        let userUpdated = await axios.get(`http://localhost:80/users/get/${userId}`);
+        await axios.post('/users/addItem', items);
+        let userUpdated = await axios.get(`/users/get/${userId}`);
         setUser(userUpdated.data);
     }
 
@@ -35,8 +34,8 @@ function Cart(props) {
         const userId = user._id;
         const productId = item._id;
         var items = {userId, productId};
-        await axios.post('http://localhost:80/users/removeItem', items);
-        let userUpdated = await axios.get(`http://localhost:80/users/get/${userId}`);
+        await axios.post('/users/removeItem', items);
+        let userUpdated = await axios.get(`/users/get/${userId}`);
         setUser(userUpdated.data);
     }
     // // Handle removing the whole item from the cart, regardless of the quantity
@@ -48,8 +47,8 @@ function Cart(props) {
         const userId = user._id;
         const productId = item._id;
         var items = {userId, productId};
-        await axios.post('http://localhost:80/users/removeAll', items);
-        let userUpdated = await axios.get(`http://localhost:80/users/get/${userId}`);
+        await axios.post('/users/removeAll', items);
+        let userUpdated = await axios.get(`/users/get/${userId}`);
         setUser(userUpdated.data);
     }
 

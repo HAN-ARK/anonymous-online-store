@@ -9,6 +9,7 @@ import Container from '@mui/material/Container';
 import {UserContext} from "./UserContext"
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+const {}
 
 export function Login() {
     const { setUser } = useContext(UserContext);
@@ -18,7 +19,7 @@ export function Login() {
     const [loggedIn, setLoggedIn] = useState(false);
 
     const checkUser = async (username, password) => {
-        const res = await axios.get('http://localhost:80/users');
+        const res = await axios.get('/users');
         const { data } = res;
         var arr = Object.values(data);
         for (var i = 0; i < arr.length; i++) {
@@ -39,7 +40,7 @@ export function Login() {
         }
         setWrongPassword(false);
         const user = {email, username, password};
-        const response = await axios.post('http://localhost:80/users/login', user);
+        const response = await axios.post('/users/login', user);
         const storeUser = response.data;
         setUser(storeUser);
         window.localStorage.setItem('id', storeUser);
