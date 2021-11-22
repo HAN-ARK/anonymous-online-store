@@ -12,7 +12,7 @@ Pui Hei Yan
 ## Features  
 * Guest check out
 * Create new user  
-* Log In  
+* Log In & Out
 * Add and remove one quantity of an item  
 * Remove all quantities of an item  
 * Edit the quantity of the items in real time  
